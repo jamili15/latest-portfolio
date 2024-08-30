@@ -1,22 +1,47 @@
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import Image from "next/image";
+import memojiImage from "@/assets/images/memoji-computer.png";
+import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        <div
-          className="absolute inset-0 -z-30 opacity-5"
-          style={{
-            backgroundImage: `url(${grainImage.src})`,
-          }}
-        ></div>
-        <div className="size-[620px] hero-ring"></div>
-        <div className="size-[820px] hero-ring"></div>
-        <div className="size-[1020px] hero-ring"></div>
-        <div className="size-[1220px] hero-ring"></div>
-        {/* <HeroOrbit size={800} roration={-72}>
+    <div>
+      <div className="container">
+        <Image src={memojiImage} alt="Person peeking from behind laptop" />
+        <div>
+          <div></div>
+          <div>Available for new projects</div>
+        </div>
+        <h1>Building Exceptional User Experiences</h1>
+        <p>
+          I specialize in transforming designs into functional, high-performing
+          web applications. Let's discuss your next project.
+        </p>
+        <div>
+          <button>
+            <span>Explore My work</span>
+            <ArrowDown />
+          </button>
+          <button>
+            <span>✋</span>
+            <span>Let's Connect</span>
+          </button>
+        </div>
+        <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+          <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+            <div
+              className="absolute inset-0 -z-30 opacity-5"
+              style={{
+                backgroundImage: `url(${grainImage.src})`,
+              }}
+            ></div>
+            <div className="size-[620px] hero-ring"></div>
+            <div className="size-[820px] hero-ring"></div>
+            <div className="size-[1020px] hero-ring"></div>
+            <div className="size-[1220px] hero-ring"></div>
+            {/* <HeroOrbit size={800} roration={-72}>
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={550} roration={20}>
@@ -40,6 +65,8 @@ export const HeroSection = () => {
         <HeroOrbit size={720} roration={88}>
           <SparkleIcon className="size-28 text-emerald-300" />
         </HeroOrbit> */}
+          </div>
+        </div>
       </div>
     </div>
   );
