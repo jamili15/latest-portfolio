@@ -1,55 +1,69 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import animatedPortfolio from "@/assets/images/animated-portfolio.png";
+import myFirstPortfolio from "@/assets/images/first-portfolio.png";
+import landingPage from "@/assets/images/landingpage.png";
+import newPortfolio from "@/assets/images/latest-portfolio.png";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 import checkCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import Link from "next/link";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
+    company: "Example",
     year: "2022",
-    title: "Dark Saas Landing Page",
+    title: "Simple Animated Portfolio",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://jamili15.github.io/Animated-Porfolio/",
+    image: animatedPortfolio,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Example",
+    year: "2022",
+    title: "My First Landing Page",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://jamili15.github.io/My-first-Portfolio/",
+    image: myFirstPortfolio,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Example",
+    year: "2022",
+    title: "My First Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://jamili15.github.io/Landing-Page/",
+    image: landingPage,
+  },
+  {
+    company: "Example",
+    year: "2024",
+    title: "My New Portfolio",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://jamili15.github.io/Landing-Page/",
+    image: newPortfolio,
   },
 ];
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ id = "mywork" }: { id?: string }) => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id={id}>
       <SectionHeader
         eyebrow="Real-world Results"
         title="Feaured Projects"
@@ -100,12 +114,16 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
 
-                <a href={project.link}>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                     <ArrowUpRightIcon className="size-4 " />
                     <span>Visit Live Site</span>
                   </button>
-                </a>
+                </Link>
               </div>
               <div className="relative">
                 <Image
