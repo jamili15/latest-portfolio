@@ -141,11 +141,12 @@ export const HeroSection = () => {
               <ArrowDown className="size-4" />
             </button>
           </Link>
-
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold ">Let's Connect</span>
-          </button>
+          <Link href="/cv/James-Resume-2023-.docx" className="z-10" download>
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <span>👇</span>
+              <span className="font-normal">Download CV</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
