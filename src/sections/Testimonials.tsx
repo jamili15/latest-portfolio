@@ -12,6 +12,8 @@ import prisma from "@/lib/dbConnect";
 export const TestimonialsSection = async () => {
   const testimonial = await prisma.testimonials.findMany();
 
+  console.log("Testimonials", testimonial);
+
   const testimonials = testimonial.map((testimony, index) => ({
     name: testimony.name,
     position: testimony.position,
