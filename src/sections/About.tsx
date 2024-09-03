@@ -2,13 +2,20 @@
 
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import BookImage from "@/assets/images/book-cover.png";
+import TypeScript from "@/assets/icons/ts.svg";
+import NextJS from "@/assets/icons/next.svg";
+import TailwindCSS from "@/assets/icons/tailwind.svg";
+import Bootstrap from "@/assets/icons/bootstrap.svg";
+import Prisma from "@/assets/icons/prisma.svg";
+import MongoDB from "@/assets/icons/mongodb.svg";
+import FinalForm from "@/assets/icons/finalform.svg";
+import Mui from "@/assets/icons/mui.svg";
+import animeBook from "@/assets/images/anime-book.jpg";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/maps.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -19,10 +26,6 @@ import { useRef } from "react";
 
 const toolboxItems = [
   {
-    title: "Javascript",
-    iconType: JavascriptIcon,
-  },
-  {
     title: "HTML5",
     iconType: HTMLIcon,
   },
@@ -31,23 +34,55 @@ const toolboxItems = [
     iconType: CssIcon,
   },
   {
+    title: "Tailwind CSS",
+    iconType: TailwindCSS,
+  },
+  {
+    title: "Bootstrap",
+    iconType: Bootstrap,
+  },
+  {
+    title: "Javascript",
+    iconType: JavascriptIcon,
+  },
+  {
+    title: "TypeScript",
+    iconType: TypeScript,
+  },
+  {
     title: "REACT",
     iconType: ReactIcon,
   },
   {
-    title: "CHROME",
-    iconType: ChromeIcon,
+    title: "Next JS",
+    iconType: NextJS,
+  },
+  {
+    title: "Prisma",
+    iconType: Prisma,
+  },
+  {
+    title: "MongoDB",
+    iconType: MongoDB,
   },
   {
     title: "Github",
     iconType: GithubIcon,
   },
+  {
+    title: "Material UI",
+    iconType: Mui,
+  },
+  {
+    title: "React Final Form",
+    iconType: FinalForm,
+  },
 ];
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Cooking",
+    emoji: "🍳",
     left: "5%",
     top: "5%",
   },
@@ -76,8 +111,8 @@ const hobbies = [
     top: "45%",
   },
   {
-    title: "Fitness",
-    emoji: "💪",
+    title: "Camping",
+    emoji: "🏕",
     left: "5%",
     top: "65%",
   },
@@ -105,10 +140,16 @@ export const AboutSection = () => {
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title={"My Reads"}
-                description={"Eplore the books shaping my perspectives."}
+                description={
+                  "I'm passionate about anime and manga, finding inspiration and adventure in every story. These worlds are my favorite escape."
+                }
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={BookImage} alt="Book cover" />
+                <Image
+                  src={animeBook}
+                  alt="Book cover"
+                  className="rounded-lg"
+                />
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
